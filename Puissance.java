@@ -1,17 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 // fait par Adil Ismail :D
-public class Puissance {
 
-    public static boolean game = true ;
-
-Afficher plus
-message.txt8 Ko
-﻿
-
-import java.util.ArrayList;
-import java.util.Scanner;
-// fait par Bastien :D
 public class Puissance {
 
     public static boolean game = true ;
