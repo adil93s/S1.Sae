@@ -1,0 +1,396 @@
+@font-face {
+  font-family: "Optic";
+  src: url("fonts/optician.ttf");
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+
+body {
+  width: 1200px;
+  margin: auto;
+  background: url(img/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  letter-spacing: 1px;
+  font-family: "Optic";
+}
+
+/*HEADER*/
+.nav {
+  box-shadow: 11px 21px 100px rgba(0, 75, 204, 1);
+  -webkit-box-shadow: 11px 21px 100px rgba(0, 75, 204, 1);
+  -moz-box-shadow: 11px 21px 100px rgba(0, 75, 204, 1);
+  background: linear-gradient(70deg, #3a5199, #0059ff, #009eff);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-bottom: 70px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logo,
+.nav-right {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.nav-right {
+  padding-top: 25px;
+}
+
+.nav img {
+  width: 65px;
+}
+
+.nav a {
+  color: white;
+  margin: 0 5px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #545454;
+  transition: 0.5s;
+}
+
+#bor {
+  border-right: 1px solid white;
+}
+
+/*MAIN*/
+
+.top {
+  display: flex;
+}
+
+.top > div {
+  flex: 1;
+}
+
+.box1 {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  width: 800px;
+  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+.box1 img {
+  opacity: 0.6;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  width: 800px;
+  height: 400px;
+}
+
+.top a img {
+  width: 40px;
+  float: right;
+}
+
+.top h1 {
+  letter-spacing: 2px;
+  font-family: "Optic";
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  margin-right: 20px;
+  display: inline-block;
+}
+
+#bar {
+  box-shadow: #004bcc 0px 0px 20px 3px;
+  background: #009eff;
+  height: 2px;
+  display: inline-block;
+  width: 215px;
+  margin-bottom: 5px;
+}
+
+.top p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #c8c8c8;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.box-right {
+  text-align: center;
+  position: relative;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(70deg, #1d2738, #3c3c3c);
+  margin: 40px;
+}
+
+.box-right p {
+  color: #c8c8c8;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.box-right h1 {
+  text-transform: uppercase;
+  font-family: "Optic";
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.box-right:before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.box-right:after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  z-index: -2;
+  filter: blur(40px);
+}
+
+.box-right::before,
+.box-right::after {
+  background: linear-gradient(235deg, white, #010615, #009eff);
+}
+
+/*BOTTOM*/
+
+.bottom {
+  margin-top: 50px;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0006);
+}
+
+.swiper-slide img {
+  opacity: 0.8;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/*FOOTER*/
+
+.footer {
+  box-shadow: 11px 21px 100px rgba(0, 75, 204, 1);
+  -webkit-box-shadow: 11px 21px 100px rgba(0, 75, 204, 1);
+  -moz-box-shadow: 11px 21px 100px rgba(0, 75, 204, 1);
+  background: linear-gradient(70deg, #3a5199, #0059ff, #009eff);
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  margin-top: 50px;
+  bottom: 0;
+}
+
+.footer-top {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: black;
+  filter: opacity(0.3);
+  height: 30px;
+}
+
+#footer-left {
+  margin-left: 50px;
+  display: inline-block;
+}
+
+#footer-right {
+  margin-left: 880px;
+  display: inline-block;
+}
+
+.footer p {
+  font-size: 13px;
+}
+
+/*Contact*/
+
+.contact {
+  position: relative;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.37);
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+.contact .content h2 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.contact .content p {
+  color: #fff;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .contactInfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: linear-gradient(70deg, #3a5199, #0059ff, #009eff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.fa-map-marker,
+.fa-envelope-o,
+.fa-phone {
+  color: #b2c5dd;
+}
+
+.container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+
+.container .contactInfo .box .text h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  background: -webkit-linear-gradient(70deg, #3a5199, #0059ff, #009eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactForm {
+  text-align: center;
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+}
+
+.contactForm h2 {
+  font-size: 30px;
+  font-weight: 500;
+  background: -webkit-linear-gradient(70deg, #3a5199, #0059ff, #009eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  font-family: "Optic";
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  background: -webkit-linear-gradient(70deg, #3a5199, #0059ff, #009eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  font-family: "Optic";
+  width: 100px;
+  background: #0059ff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
