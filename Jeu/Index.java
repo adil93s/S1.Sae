@@ -63,22 +63,4 @@ public class Index {
 }*/
 /*https://mathonomie.files.wordpress.com/2017/10/cm-2017-10-16-isn-presentation-bataille-navale-beamer.pdf
 
-import java.util.Scanner;
-public class Pseudo {
-    public  static void PseudoJ (){
-        Scanner sc= new Scanner (System.in);
-        System.out.println("Veuillez entrer le pseudos du premier joueur: ");
-        String nom1 = sc.nextLine();
-        System.out.println("Bienvenue Amiral " + nom1);
-        System.out.println("Veuillez entrer le pseudos du second joueur: ");
-        String nom2 = sc.nextLine();
-        System.out.println("Bienvenue Capitaine " + nom2);
-            try{
-               int verif = Integer.parseInt(nom1);
-                verif = Integer.parseInt(nom2);
-            }catch (NumberFormatException e){
-                System.out.println("Erreur! Veuillez rentrer un pseudos contenant au moins un caractère!: ");
-            }
-         }
-    }*/
 }
