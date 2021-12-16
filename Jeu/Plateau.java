@@ -5,13 +5,10 @@ public class Plateau{
         situation = initialisation();
         afficherP(situation);
     }
-    static char[][] situation = new char[11][11];
+    static int[][] situation = new int[11][11];
     static boolean fini_jeu;
     public static int[][] initialisation() {
-        int i;
-        int j;
-        int x;
-        int y;
+        int i, j, x,  y;
         for (i = 0; i < 10; i = i + 1) {
             for (j = 0; j < 10; j = j + 1) {
                 situation[i][j] = 0;

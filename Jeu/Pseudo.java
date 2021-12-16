@@ -1,3 +1,5 @@
+package Jeu;
+
 import java.util.Scanner;
 public class Pseudo {
     public static void main  (String[] args){
