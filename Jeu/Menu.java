@@ -1,6 +1,6 @@
+package Jeu;
 import java.io.*;
 import java.util.Scanner;
-import java.sql.SQLOutput;
 
 public class Menu {
     public static void main (String[] args) throws Exception {

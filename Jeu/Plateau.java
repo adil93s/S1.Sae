@@ -1,6 +1,11 @@
+package Jeu;
 
 public class Plateau{
-    static int[][] situation = new int[11][11];
+    public static void main(String[] args) {
+        situation = initialisation();
+        afficherP(situation);
+    }
+    static char[][] situation = new char[11][11];
     static boolean fini_jeu;
     public static int[][] initialisation() {
         int i;
@@ -34,14 +39,10 @@ public class Plateau{
                     System.out.print("* ");
                 }
                 if (situation[i][j] == 1) {
-                    System.out.print("~ ");
+                    System.out.print("X ");
                 }
             }
             System.out.println();
         }
-    }
-    public static void main(String[] args) {
-        situation = initialisation();
-        afficherP(situation);
     }
 }

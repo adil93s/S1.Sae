@@ -17,5 +17,5 @@ public class Index {
 
 }
 
-/*https://mathonomie.files.wordpress.com/2017/10/cm-2017-10-16-isn-presentation-bataille-navale-beamer.pdf
+/*https://mathonomie.files.wordpress.com/2017/10/cm-2017-10-16-isn-presentation-bataille-navale-beamer.pdf*/
 
