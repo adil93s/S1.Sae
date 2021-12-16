@@ -88,7 +88,7 @@ public class Puissance {
 
     }
 
-uybyvb
+
 
 
     public static void isegalite(char[][] plateau){
