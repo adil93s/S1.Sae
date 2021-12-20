@@ -1,0 +1,22 @@
+public class Fin {
+    public static void ecranFin1 (int n , String nom ) { // comme son nom l’indique
+    String nom1;
+    nom1= "Adil";
+    System.out.println (" Vous êtes le roi des mers , " + nom1 + " ! ");
+    String nom2;
+    nom2= "Ismail";
+    System.out.println (" Vous avez terrasse " + nom2 + " en " + n + " coups ! ");
+    }
+    public static void ecranFin2 (int n , String nom ) { // comme son nom l’indique
+        String nom2;
+        nom2= "Ismail";
+        System.out.println (" Vous êtes le roi des mers , " + nom2 + " ! ");
+        String nom1;
+        nom1= "Adil";
+        System.out.println (" Vous avez terrasse " + nom1 + " en " + n + " coups ! ");
+        }
+        public static void main (String [] args){
+            ecranFin1(5, null);
+            ecranFin2(5, null);
+        }
+}
