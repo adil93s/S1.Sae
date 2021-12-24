@@ -1,0 +1,40 @@
+public class read{
+    
+    public static void main (String [] args){
+
+    }
+    
+    public static String readString () {
+     return System . console () . readLine () ;
+     }
+    public static boolean isInt ( String s ) {
+     return s . matches ("\\d+") ;
+     }
+    public static int readInt () {
+         while ( true ) {
+        String s = readString () ;
+        if ( isInt ( s ) ) return Integer . parseInt ( s ) ;
+        }
+     }
+}
+public static int tirer(Terrain tr, final Case c)
+{
+int rs = 0;
+int valeur = evalCase(tr,c.lig,c.col);
+if (valeur == BMer)
+{
+fixerCase(tr,c.lig,c.col,BTir);
+System.out.println("Bateau dans l’eau!");
+}
+else if (valeur == BBateau)
+{
+fixerCase(tr,c.x,c.y,BDebris);
+System.out.println("Bateau coule...");
+rs = 1;
+}
+else
+{
+System.out.println("OUPS... ne devrait jamais arrive!");
+}
+return rs;
+}
