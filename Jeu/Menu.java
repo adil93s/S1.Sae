@@ -80,13 +80,15 @@ public class Menu {
         while (choix != 2) {
             switch (choix){
                 case 1:
-                    Index.Play();
-                    clearConsole();
+                    String gagnant = Index.Play();
+                    System.out.println("\n" + gagnant + " a gagné la partie !!!!");
                     break;
                 default:
                     System.out.println("Erreur!! Veuillez entrer un choisir une des deux options: ");
                     break;
             }
+            System.out.println();
+            messageMenu();
             choix = Integer.parseInt(sc.nextLine());
         }
         if (choix == 2) {
