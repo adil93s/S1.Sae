@@ -98,6 +98,7 @@ public class Index {
     public static void Play() {   
         String j1 = ANSI_YELLOW + Pseudo.newPseudo();
         String j2 = ANSI_BLUE + Pseudo.newPseudo();
+        Menu.clearConsole();
 
         System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
         Grille.afficherGrille(j2Grille);
@@ -125,7 +126,6 @@ public class Index {
             }
 
             naviretouche = true;
-
         }
     }
 
