@@ -11,6 +11,8 @@ public class Index {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
       
+    public static String gagnant;
+
     static String[][] j1Grille = Grille.creerGrille();
     static String[][] j2Grille = Grille.creerGrille();
     static boolean naviretouche = true;
@@ -64,11 +66,15 @@ public class Index {
             if (grille == j1Grille) {
                 System.out.println("\n\t\t      Grille de votre adversaire " + j1 + ANSI_RESET + " :\n");
                 Grille.afficherGrille(j1Grille);
-                System.out.println("\n\t\t\t" + j2 + " vous continuez de jouer !");
+                if (!fini_jeu) {
+                    System.out.println("\n\t\t\t" + j2 + " vous continuez de jouer !");
+                }
             } else {
                 System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
                 Grille.afficherGrille(j2Grille);
-                System.out.println("\n\t\t\t" + j1 + " vous continuez de jouer !");
+                if (!fini_jeu) {
+                    System.out.println("\n\t\t\t" + j1 + " vous continuez de jouer !");
+                }
             }
         } else {
             grille[y-1][x-1] = ANSI_RED + "✗";
@@ -77,16 +83,20 @@ public class Index {
             if (grille == j1Grille) {
                 System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
                 Grille.afficherGrille(j2Grille);
-                System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
+                if (!fini_jeu) {
+                    System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
+                }
             } else {
                 System.out.println("\n\t\t      Grille de votre adversaire " + j1 + ANSI_RESET + " :\n");
                 Grille.afficherGrille(j1Grille);
-                System.out.println("\n\t\t\t    " + j2 + " à votre tour !");
+                if (!fini_jeu) {
+                    System.out.println("\n\t\t\t    " + j2 + " à votre tour !");
+                }
             }
         }
     }
 
-    public static String Play() {   
+    public static void Play() {   
         String j1 = ANSI_YELLOW + Pseudo.newPseudo();
         String j2 = ANSI_BLUE + Pseudo.newPseudo();
 
@@ -95,10 +105,10 @@ public class Index {
         System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
 
         while (fini_jeu == false) {
-            while (naviretouche == true) {
+            while (naviretouche == true && gagnant != j1 && gagnant != j2) {
                 if (fini_jeu == true) {
+                    gagnant = j1;
                     naviretouche = false;
-                    return j1;
                 } else {
                     Tirer(j2Grille, j1, j2);
                 }
@@ -106,10 +116,10 @@ public class Index {
 
             naviretouche = true;
             
-            while (naviretouche == true) {
+            while (naviretouche == true && gagnant != j1 && gagnant != j2) {
                 if (fini_jeu == true) {
+                    gagnant = j2;
                     naviretouche = false;
-                    return j2;
                 } else {
                     Tirer(j1Grille, j1, j2);
                 }
@@ -118,8 +128,6 @@ public class Index {
             naviretouche = true;
 
         }
-        return "Erreur";
-
     }
 
     public static void main(String[] args) {
