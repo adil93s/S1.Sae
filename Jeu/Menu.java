@@ -87,8 +87,7 @@ public class Menu {
                     System.out.println("Erreur!! Veuillez entrer un choisir une des deux options: ");
                     break;
             }
-            System.out.println();
-            messageMenu();
+            System.out.println("\nAppuyez sur 2 pour quitter :");
             choix = Integer.parseInt(sc.nextLine());
         }
         if (choix == 2) {
