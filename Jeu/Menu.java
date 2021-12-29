@@ -79,21 +79,23 @@ public class Menu {
         messageMenu();
         int choix = Integer.parseInt(sc.nextLine());
         while (choix != 2) {
+            if (Index.fini_jeu) {
+                choix = 2;
+            }
             switch (choix){
                 case 1:
-                    String gagnant = Index.Play();
-                    System.out.println("\n" + gagnant + " a gagné la partie !!!!");
+                    Index.Play();
+                    System.out.println("\nÉlimination confirmé, " + Index.gagnant + " est le grand gagnant !");
                     break;
                 default:
-                    System.out.println("Erreur!! Veuillez entrer un choisir une des deux options: ");
+                    if (!Index.fini_jeu) {
+                        System.out.println("Erreur!! Veuillez entrer un choisir une des deux options: ");
+                        choix = Integer.parseInt(sc.nextLine());
+                    }
                     break;
             }
-            System.out.println("\nAppuyez sur 2 pour quitter :");
-            choix = Integer.parseInt(sc.nextLine());
-        }
-        if (choix == 2) {
-            clearConsole();
         }
         sc.close();
     }
 }
+
