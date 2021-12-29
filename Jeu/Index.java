@@ -44,13 +44,12 @@ public class Index {
         }
 
         while (grille[y-1][x-1] == ANSI_GREEN + "✗" || grille[y-1][x-1] == ANSI_RED + "✗"){
-            System.out.println("\nZone déjà détruite !\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
+            System.out.println("\nZone déjà détruite !\nEntrer les coordonnées pour lancer à nouveau une frappe : (colonne puis ligne)");
             x = Integer.parseInt(sc.nextLine());
             while (x < 1 || x > 10) {
                 System.out.println("\nCoordonnée (colonne) incorrecte :");
                 x = Integer.parseInt(sc.nextLine());
             }
-            System.out.println("\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
             y = Integer.parseInt(sc.nextLine());
             while (y < 1 || y > 10) {
                 System.out.println("\nCoordonnée (ligne) incorrecte :");
