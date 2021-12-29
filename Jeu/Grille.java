@@ -136,9 +136,10 @@ public class Grille {
     public static void afficherGrille(String[][] grilleJoueur) {
         int ligne;
         int colonne;
-        System.out.println("     1 2 3 4 5 6 7 8 9 10");
+        System.out.println("\t\t\t     1 2 3 4 5 6 7 8 9 10");
         for (ligne = 0; ligne < grilleJoueur.length; ligne++) {
             if (ligne == 0) {
+                System.out.print("\t\t\t");
                 for (int repeat = 0; repeat < 26; repeat++) {
                     if (repeat < 3)
                         System.out.print(" ");
@@ -148,9 +149,9 @@ public class Grille {
                 System.out.println();
             }  
             if (ligne != 9) {
-                System.out.print((ligne+1) + "  ");
+                System.out.print("\t\t\t" + (ligne+1) + "  ");
             } else {
-                System.out.print((ligne+1) + " ");
+                System.out.print("\t\t\t" + (ligne+1) + " ");
             }
             System.out.print("■ ");
             for (colonne = 0; colonne < grilleJoueur[ligne].length; colonne++) {
@@ -158,6 +159,7 @@ public class Grille {
             }
             System.out.print("■\n"); 
         }
+        System.out.print("\t\t\t");
         for (int repeat = 0; repeat < 26; repeat++) {
             if (repeat < 3)
                 System.out.print(" ");
