@@ -89,7 +89,7 @@ public class Menu {
                     break;
                 default:
                     if (!Index.fini_jeu) {
-                        System.out.println("Erreur!! Veuillez entrer un choisir une des deux options: ");
+                        System.out.println("\n Choix Incorrecte : ");
                         choix = Integer.parseInt(sc.nextLine());
                     }
                     break;
