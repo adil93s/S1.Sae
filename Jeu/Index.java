@@ -57,7 +57,7 @@ public class Index {
         }
 
         if (grille[y-1][x-1] == "□") {
-            grille[y-1][x-1] = ANSI_GREEN + "X";
+            grille[y-1][x-1] = ANSI_GREEN + "✗";
             System.out.println(ANSI_GREEN + "\n\t\t\t  ✔ Navire ennemi touché !" + ANSI_RESET);
             naviretouche = true;
             fini_jeu = verifFinJeu(grille);
@@ -71,7 +71,7 @@ public class Index {
                 System.out.println("\n\t\t\t" + j1 + " vous continuez de jouer !");
             }
         } else {
-            grille[y-1][x-1] = ANSI_RED + "X";
+            grille[y-1][x-1] = ANSI_RED + "✗";
             System.out.println(ANSI_RED + "\n\t\t\t   ✗ Aucun navire touché !" + ANSI_RESET);
             naviretouche = false;
             if (grille == j1Grille) {
