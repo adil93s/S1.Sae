@@ -4,15 +4,7 @@ import java.util.Scanner;
 public class Menu {
 
     public final static void clearConsole() {
-        try {
-            if(System.getProperty("os.name" ).startsWith("Windows" ))
-              Runtime.getRuntime().exec("cls" );
-            else
-              Runtime.getRuntime().exec("clear" );
-        } catch (Exception excpt) {
-            for(int i=0; i < 100; i++)
-              System.out.println();
-        }
+        System.out.print("\033[H\033[2J");
     }
 
     public static void afficherEnLigne(char c, int longueur) {
@@ -84,6 +76,7 @@ public class Menu {
             }
             switch (choix){
                 case 1:
+                    clearConsole();
                     Index.Play();
                     System.out.println("\nÉlimination confirmé, " + Index.gagnant + " est le grand gagnant !");
                     break;
