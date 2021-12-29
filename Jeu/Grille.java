@@ -155,7 +155,11 @@ public class Grille {
             }
             System.out.print("■ ");
             for (colonne = 0; colonne < grilleJoueur[ligne].length; colonne++) {
-                System.out.print(ANSI_CYAN + grilleJoueur[ligne][colonne] + " " + ANSI_RESET);
+                if (grilleJoueur[ligne][colonne] == (ANSI_GREEN + "✗") || grilleJoueur[ligne][colonne] == (ANSI_RED + "✗")) {
+                    System.out.print(ANSI_CYAN + grilleJoueur[ligne][colonne] + " " + ANSI_RESET);
+                } else {
+                    System.out.print(ANSI_CYAN + "~ " + ANSI_RESET);
+                }
             }
             System.out.print("■\n"); 
         }
