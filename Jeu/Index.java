@@ -29,62 +29,70 @@ public class Index {
 
     public static void Tirer(String[][] grille, String j1, String j2) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("\nVeuillez entrer la position colonne de l'endroit ou vous pensez que le bateau ennemie se situe! Bonne chance Mousaillons!! (entre 1 et 10)");
+        System.out.println("\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
         int x = Integer.parseInt(sc.nextLine());
         while (x < 1 || x > 10) {
-            System.out.println("Erreur!! Vous avez rentrer une valeur non valide faîtes attention!  X");
+            System.out.println("\nCoordonnée (colonne) incorrecte :");
             x = Integer.parseInt(sc.nextLine());
         }
-        System.out.println("\nVeuillez entrer une position ligne de l'endroit ou vous pensez que le bateau ennemie se situe! Bonne chance Mousaillons!! (entre 1 et 10)");
         int y = Integer.parseInt(sc.nextLine());
         while (y < 1 || y > 10) {
-            System.out.println("Erreur!! Vous avez rentrer une valeur non valide faîtes attention!  Y");
+            System.out.println("\nCoordonnée (ligne) incorrecte :");
             y = Integer.parseInt(sc.nextLine());
         }
 
         while (grille[y-1][x-1] == ANSI_GREEN + "X" || grille[y-1][x-1] == ANSI_RED + "X"){
-            System.out.println("\nErreur !! Vous ne pouvez pas jouer deux fois aux mêmes endroits !\nVeuillez entrer la position colonne de l'endroit ou vous pensez que le bateau ennemie se situe! Bonne chance Mousaillons!! (entre 1 et 10)");
+            System.out.println("\nZone déjà détruite !\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
             x = Integer.parseInt(sc.nextLine());
             while (x < 1 || x > 10) {
-                System.out.println("\nErreur!! Vous avez rentrer une valeur non valide faîtes attention!  X");
+                System.out.println("\nCoordonnée (colonne) incorrecte :");
                 x = Integer.parseInt(sc.nextLine());
             }
-            System.out.println("\nVeuillez entrer une position ligne de l'endroit ou vous pensez que le bateau ennemie se situe! Bonne chance Mousaillons!! (entre 1 et 10)");
+            System.out.println("\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
             y = Integer.parseInt(sc.nextLine());
             while (y < 1 || y > 10) {
-                System.out.println("\nErreur!! Vous avez rentrer une valeur non valide faîtes attention!  Y");
+                System.out.println("\nCoordonnée (ligne) incorrecte :");
                 y = Integer.parseInt(sc.nextLine());
             }
         }
 
         if (grille[y-1][x-1] == "□") {
             grille[y-1][x-1] = ANSI_GREEN + "X";
-            System.out.println("\nNavire ennemi touché !\n");
+            System.out.println(ANSI_GREEN + "\n\t\t\t  ✔ Navire ennemi touché !" + ANSI_RESET);
             naviretouche = true;
             fini_jeu = verifFinJeu(grille);
-            System.out.println("\nGrille de " + j1 + " :\n");
-            Grille.afficherGrille(j1Grille);
-            System.out.println("\nGrille de " + j2 + " :\n");
-            Grille.afficherGrille(j2Grille);
+            if (grille == j1Grille) {
+                System.out.println("\n\t\t      Grille de votre adversaire " + j1 + ANSI_RESET + " :\n");
+                Grille.afficherGrille(j1Grille);
+                System.out.println("\n\t\t\t" + j2 + " vous continuez de jouer !");
+            } else {
+                System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
+                Grille.afficherGrille(j2Grille);
+                System.out.println("\n\t\t\t" + j1 + " vous continuez de jouer !");
+            }
         } else {
             grille[y-1][x-1] = ANSI_RED + "X";
-            System.out.println("\nAucun navire touché !\n");
+            System.out.println(ANSI_RED + "\n\t\t\t   ✗ Aucun navire touché !" + ANSI_RESET);
             naviretouche = false;
-            System.out.println("\nGrille de " + j1 + " :\n");
-            Grille.afficherGrille(j1Grille);
-            System.out.println("\nGrille de " + j2 + " :\n");
-            Grille.afficherGrille(j2Grille);
+            if (grille == j1Grille) {
+                System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
+                Grille.afficherGrille(j2Grille);
+                System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
+            } else {
+                System.out.println("\n\t\t      Grille de votre adversaire " + j1 + ANSI_RESET + " :\n");
+                Grille.afficherGrille(j1Grille);
+                System.out.println("\n\t\t\t    " + j2 + " à votre tour !");
+            }
         }
     }
 
     public static String Play() {   
-        String j1 = Pseudo.newPseudo();
-        String j2 = Pseudo.newPseudo();
+        String j1 = ANSI_YELLOW + Pseudo.newPseudo();
+        String j2 = ANSI_BLUE + Pseudo.newPseudo();
 
-        System.out.println("\n\nGrille de " + j1 + " :\n");
-        Grille.afficherGrille(j1Grille);
-        System.out.println("\n\nGrille de " + j2 + " :\n");
+        System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
         Grille.afficherGrille(j2Grille);
+        System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
 
         while (fini_jeu == false) {
             while (naviretouche == true) {
@@ -92,7 +100,6 @@ public class Index {
                     naviretouche = false;
                     return j1;
                 } else {
-                    System.out.println("\n" + j1 + " à vous de tirer !");
                     Tirer(j2Grille, j1, j2);
                 }
             }
@@ -104,7 +111,6 @@ public class Index {
                     naviretouche = false;
                     return j2;
                 } else {
-                    System.out.println("\n" + j2 + " à vous de tirer !");
                     Tirer(j1Grille, j1, j2);
                 }
             }
