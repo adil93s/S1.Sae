@@ -43,7 +43,7 @@ public class Index {
             y = Integer.parseInt(sc.nextLine());
         }
 
-        while (grille[y-1][x-1] == ANSI_GREEN + "X" || grille[y-1][x-1] == ANSI_RED + "X"){
+        while (grille[y-1][x-1] == ANSI_GREEN + "✗" || grille[y-1][x-1] == ANSI_RED + "✗"){
             System.out.println("\nZone déjà détruite !\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
             x = Integer.parseInt(sc.nextLine());
             while (x < 1 || x > 10) {
