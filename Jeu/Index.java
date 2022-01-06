@@ -29,31 +29,43 @@ public class Index {
         return true;
     }    
 
+    public static int coordonnee(int x) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            x = Integer.parseInt(sc.nextLine());
+        } catch (Exception e) {
+            x=-1;
+        }
+        return x ; 
+    }
+
     public static void Tirer(String[][] grille, String j1, String j2) {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
-        int x = Integer.parseInt(sc.nextLine());
+        int x = 0; 
+        x = coordonnee(x);
         while (x < 1 || x > 10) {
             System.out.println("\nCoordonnée (colonne) incorrecte :");
-            x = Integer.parseInt(sc.nextLine());
+            x = coordonnee(x);
         }
-        int y = Integer.parseInt(sc.nextLine());
+        int y = 0;
+        y = coordonnee(y);
         while (y < 1 || y > 10) {
             System.out.println("\nCoordonnée (ligne) incorrecte :");
-            y = Integer.parseInt(sc.nextLine());
+            y = coordonnee(y);
         }
 
         while (grille[y-1][x-1] == ANSI_GREEN + "✗" || grille[y-1][x-1] == ANSI_RED + "✗"){
             System.out.println("\nZone déjà détruite !\nEntrer les coordonnées pour lancer à nouveau une frappe : (colonne puis ligne)");
-            x = Integer.parseInt(sc.nextLine());
+            x = coordonnee(x);
             while (x < 1 || x > 10) {
                 System.out.println("\nCoordonnée (colonne) incorrecte :");
-                x = Integer.parseInt(sc.nextLine());
+                x = coordonnee(x);
             }
-            y = Integer.parseInt(sc.nextLine());
+            y = coordonnee(y);
             while (y < 1 || y > 10) {
                 System.out.println("\nCoordonnée (ligne) incorrecte :");
-                y = Integer.parseInt(sc.nextLine());
+                y = coordonnee(y);
             }
         }
 
