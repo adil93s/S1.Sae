@@ -69,7 +69,9 @@ public class Menu {
         System.out.println("\n\n" + message());
         System.out.println("\n\n\t\t\t     Bataille Navale ⚔️, voici les règles du jeu :\n\n1. Les navires sont placé aléatoirement dans la map : 4 navires de 1 case, 3 navires de 2 cases et 1 navire de 3 cases\n\t\t2. Le premier qui coule tout les navires de l'adversaire a gagner la partie\n\t3. Si vous touchez un navire, vous continuez de jouer sinon c'est au tour de votre adversaire\n\n");
         messageMenu();
-        int choix = Integer.parseInt(sc.nextLine());
+        int choix=0;
+        choix=verif(choix);
+    
         while (choix != 2) {
             if (Index.fini_jeu) {
                 choix = 2;
@@ -83,12 +85,21 @@ public class Menu {
                 default:
                     if (!Index.fini_jeu) {
                         System.out.println("\n Choix Incorrecte : ");
-                        choix = Integer.parseInt(sc.nextLine());
+                        choix=verif(choix);
                     }
                     break;
             }
         }
         sc.close();
+    }
+    public static int verif(int x) {
+        Scanner sc = new Scanner(System.in);
+        try {
+            x = Integer.parseInt(sc.nextLine());
+        } catch (java.lang.NumberFormatException e) {
+            x=-1;
+        }
+        return x ; 
     }
 }
 
