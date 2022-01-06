@@ -10,17 +10,22 @@ public class Grille {
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
 
+    public static int coordonneNavire() {
+        //Génération coordonné aleatoirement
+        int min = 1;
+        int max = 8;
+        int range = max - min + 1;
+        int coordonne = (int)(Math.random() * range) + min;
+        
+        return coordonne;
+    }
 
     public static void placementNavire(String[][] grilleJoueur, int tailleNavire, int nombreNavire) {
         if (tailleNavire == 1) {
             for (int compteur = 0; compteur < nombreNavire; compteur++) {
 
-                //Génération coordonné x et y aleatoirement
-                int min = 1;
-                int max = 8;
-                int range = max - min + 1;
-                int x = (int)(Math.random() * range) + min;
-                int y = (int)(Math.random() * range) + min;
+                int x = coordonneNavire();
+                int y = coordonneNavire();
 
                 //Condition si presénce d'un navire ou d'un navire proche
                 boolean conditionPasDeNavire = grilleJoueur[x][y] != "□";
@@ -30,8 +35,8 @@ public class Grille {
                     grilleJoueur[x][y] = "□";
                 } else {
                     while (grilleJoueur[x][y] == "□" || grilleJoueur[x][y-1] == "□" || grilleJoueur[x-1][y] == "□" || grilleJoueur[x][y+1] == "□" || grilleJoueur[x+1][y] == "□" || grilleJoueur[x+1][y+1] == "□" || grilleJoueur[x-1][y-1] == "□" || grilleJoueur[x-1][y+1] == "□" || grilleJoueur[x+1][y-1] == "□") {
-                        x = (int)(Math.random() * range) + min;
-                        y = (int)(Math.random() * range) + min;
+                        x = coordonneNavire();
+                        y = coordonneNavire();
                     }
                     grilleJoueur[x][y] = "□";
                 }
@@ -39,12 +44,9 @@ public class Grille {
         } else if (tailleNavire == 2) {
             for (int compteur = 0; compteur < nombreNavire; compteur++) {
 
-                //Génération coordonné x et y aleatoirement
-                int min = 1;
-                int max = 8;
-                int range = max - min + 1;
-                int x = (int)(Math.random() * range) + min;
-                int y = (int)(Math.random() * range) + min;
+                int x = coordonneNavire();
+                int y = coordonneNavire();
+
 
                 //Condition si presénce d'un navire ou d'un navire proche
                 boolean conditionPasDeNavire = grilleJoueur[x][y] != "□";
@@ -62,8 +64,8 @@ public class Grille {
                     }                
                 } else {
                     while (grilleJoueur[x][y] == "□" || grilleJoueur[x][y-1] == "□" || grilleJoueur[x-1][y] == "□" || grilleJoueur[x][y+1] == "□" || grilleJoueur[x+1][y] == "□" || grilleJoueur[x+1][y+1] == "□" || grilleJoueur[x-1][y-1] == "□" || grilleJoueur[x-1][y+1] == "□" || grilleJoueur[x+1][y-1] == "□") {
-                        x = (int)(Math.random() * range) + min;
-                        y = (int)(Math.random() * range) + min;
+                        x = coordonneNavire();
+                        y = coordonneNavire();
                     }
                     grilleJoueur[x][y] = "□";
                     if (alea < 0.5) {
@@ -75,13 +77,10 @@ public class Grille {
             }
         } else {
             for (int compteur = 0; compteur < nombreNavire; compteur++) {
+                
+                int x = coordonneNavire();
+                int y = coordonneNavire();
 
-                //Génération coordonné x et y aleatoirement
-                int min = 1;
-                int max = 8;
-                int range = max - min + 1;
-                int x = (int)(Math.random() * range) + min;
-                int y = (int)(Math.random() * range) + min;
 
                 //Condition si presénce d'un navire ou d'un navire proche
                 boolean conditionPasDeNavire = grilleJoueur[x][y] != "□";
@@ -101,8 +100,8 @@ public class Grille {
                     }                 
                 } else {
                     while (grilleJoueur[x][y] == "□" || grilleJoueur[x][y-1] == "□" || grilleJoueur[x-1][y] == "□" || grilleJoueur[x][y+1] == "□" || grilleJoueur[x+1][y] == "□" || grilleJoueur[x+1][y+1] == "□" || grilleJoueur[x-1][y-1] == "□" || grilleJoueur[x-1][y+1] == "□" || grilleJoueur[x+1][y-1] == "□") {
-                        x = (int)(Math.random() * range) + min;
-                        y = (int)(Math.random() * range) + min;
+                        x = coordonneNavire();
+                        y = coordonneNavire();
                     }
                     grilleJoueur[x][y] = "□";
                     if (alea < 0.5) {
@@ -155,11 +154,11 @@ public class Grille {
             }
             System.out.print("■ ");
             for (colonne = 0; colonne < grilleJoueur[ligne].length; colonne++) {
-                if (grilleJoueur[ligne][colonne] == (ANSI_GREEN + "✗") || grilleJoueur[ligne][colonne] == (ANSI_RED + "✗")) {
+                //if (grilleJoueur[ligne][colonne] == (ANSI_GREEN + "✗") || grilleJoueur[ligne][colonne] == (ANSI_RED + "✗")) {
                     System.out.print(ANSI_CYAN + grilleJoueur[ligne][colonne] + " " + ANSI_RESET);
-                } else {
+                /*} else {
                     System.out.print(ANSI_CYAN + "~ " + ANSI_RESET);
-                }
+                }*/
             }
             System.out.print("■\n"); 
         }
