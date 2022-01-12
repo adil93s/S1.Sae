@@ -27,9 +27,34 @@ public class Index {
             }
         }
         return true;
-    }    
+    } 
+    
+    public static boolean verifNavireCoule(String[][] grille, int y, int x) {
+        if (x == 0) {
+            if ((grille[y][x] == (ANSI_GREEN + "✗") && grille[y-1][x] != "□" && grille[y+1][x] != "□" && grille[y][x+1] != "□")) {
+                return true;
+            }
+        } else if (x == 10) {
+            if ((grille[y][x] == (ANSI_GREEN + "✗") && grille[y-1][x] != "□" && grille[y+1][x] != "□" && grille[y][x-1] != "□")) {
+                return true;
+            }  
+        } else if (y == 0) {
+            if (grille[y][x] == (ANSI_GREEN + "✗") && grille[y][x-1] != "□" && grille[y+1][x] != "□" && grille[y][x+1] != "□") {
+                return true;
+            }  
+        } else if (y == 10) {
+            if (grille[y][x] == (ANSI_GREEN + "✗") && grille[y-1][x] != "□" && grille[y][x-1] != "□" && grille[y][x+1] != "□") {
+                return true;
+            }  
+        } else {
+            if (grille[y][x] == (ANSI_GREEN + "✗") && grille[y-1][x] != "□" && grille[y][x-1] != "□" && grille[y+1][x] != "□" && grille[y][x+1] != "□") {
+                return true;
+            }   
+        }
+        return false;
+    }
 
-    public static int coordonnee(int x) {
+    public static int verifCoordonnee(int x) {
         Scanner sc = new Scanner(System.in);
         try {
             x = Integer.parseInt(sc.nextLine());
@@ -39,50 +64,50 @@ public class Index {
         return x ; 
     }
 
+    public static int coordonnee(int x) {
+        x = verifCoordonnee(x);
+        while (x < 1 || x > 10) {
+            System.out.println("\nCoordonnée (colonne) incorrecte :");
+            x = coordonnee(x);
+        }
+        return x;
+    }
+
+    public static void afficherGrilleAdversaire(String[][] grille, String joueur) {
+        System.out.println("\n\t\t      Grille de votre adversaire " + joueur + ANSI_RESET + " :\n");
+        Grille.afficherGrille(grille);
+    }
+
     public static void Tirer(String[][] grille, String j1, String j2) {
         Scanner sc = new Scanner(System.in);
         System.out.println("\nEntrer les coordonnées pour lancer une frappe : (colonne puis ligne)");
         int x = 0; 
         x = coordonnee(x);
-        while (x < 1 || x > 10) {
-            System.out.println("\nCoordonnée (colonne) incorrecte :");
-            x = coordonnee(x);
-        }
         int y = 0;
         y = coordonnee(y);
-        while (y < 1 || y > 10) {
-            System.out.println("\nCoordonnée (ligne) incorrecte :");
-            y = coordonnee(y);
-        }
 
         while (grille[y-1][x-1] == ANSI_GREEN + "✗" || grille[y-1][x-1] == ANSI_RED + "✗"){
             System.out.println("\nZone déjà détruite !\nEntrer les coordonnées pour lancer à nouveau une frappe : (colonne puis ligne)");
             x = coordonnee(x);
-            while (x < 1 || x > 10) {
-                System.out.println("\nCoordonnée (colonne) incorrecte :");
-                x = coordonnee(x);
-            }
             y = coordonnee(y);
-            while (y < 1 || y > 10) {
-                System.out.println("\nCoordonnée (ligne) incorrecte :");
-                y = coordonnee(y);
-            }
         }
 
         if (grille[y-1][x-1] == "□") {
             grille[y-1][x-1] = ANSI_GREEN + "✗";
-            System.out.println(ANSI_GREEN + "\n\t\t\t  ✔ Navire ennemi touché !" + ANSI_RESET);
+            if (verifNavireCoule(grille, (y-1), (x-1))) {
+                System.out.println(ANSI_GREEN + "\n\t\t\t ✔ Le navire ennemi a coulé !" + ANSI_RESET);
+            } else {
+                System.out.println(ANSI_GREEN + "\n\t\t\t  ✔ Navire ennemi touché !" + ANSI_RESET);
+            }
             naviretouche = true;
             fini_jeu = verifFinJeu(grille);
             if (grille == j1Grille) {
-                System.out.println("\n\t\t      Grille de votre adversaire " + j1 + ANSI_RESET + " :\n");
-                Grille.afficherGrille(j1Grille);
+                afficherGrilleAdversaire(j1Grille, j1);
                 if (!fini_jeu) {
                     System.out.println("\n\t\t\t" + j2 + " vous continuez de jouer !");
                 }
             } else {
-                System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
-                Grille.afficherGrille(j2Grille);
+                afficherGrilleAdversaire(j2Grille, j2);
                 if (!fini_jeu) {
                     System.out.println("\n\t\t\t" + j1 + " vous continuez de jouer !");
                 }
@@ -92,14 +117,12 @@ public class Index {
             System.out.println(ANSI_RED + "\n\t\t\t   ✗ Aucun navire touché !" + ANSI_RESET);
             naviretouche = false;
             if (grille == j1Grille) {
-                System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
-                Grille.afficherGrille(j2Grille);
+                afficherGrilleAdversaire(j2Grille, j2);
                 if (!fini_jeu) {
                     System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
                 }
             } else {
-                System.out.println("\n\t\t      Grille de votre adversaire " + j1 + ANSI_RESET + " :\n");
-                Grille.afficherGrille(j1Grille);
+                afficherGrilleAdversaire(j1Grille, j1);
                 if (!fini_jeu) {
                     System.out.println("\n\t\t\t    " + j2 + " à votre tour !");
                 }
@@ -112,8 +135,7 @@ public class Index {
         String j2 = ANSI_BLUE + Pseudo.newPseudo();
         Menu.clearConsole();
 
-        System.out.println("\n\t\t      Grille de votre adversaire " + j2 + ANSI_RESET + " :\n");
-        Grille.afficherGrille(j2Grille);
+        afficherGrilleAdversaire(j2Grille, j2);
         System.out.println("\n\t\t\t    " + j1 + " à votre tour !");
 
         while (fini_jeu == false) {
