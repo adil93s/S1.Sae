@@ -21,6 +21,7 @@ public class Grille {
     }
 
     public static void placementNavire(String[][] grilleJoueur, int tailleNavire, int nombreNavire) {
+        //Placement de navire en fonction de leur taille aléatoirement dans une grille
         if (tailleNavire == 1) {
             for (int compteur = 0; compteur < nombreNavire; compteur++) {
 
@@ -79,6 +80,7 @@ public class Grille {
     }
 
     public static String[][] creerGrille() {
+        //Création d'une grille à deux dimesions où on place des vagues à chaque emplacement
         String[][] grilleJoueur = new String[10][10];
         int ligne;
         int colonne;
@@ -87,6 +89,7 @@ public class Grille {
                 grilleJoueur[ligne][colonne] = "~";
             }
         }
+        //On appelle la fonction placementNavire pour le placement des différents navire dans la grille
         placementNavire(grilleJoueur, 2, 3);
         placementNavire(grilleJoueur, 1, 4);
 
