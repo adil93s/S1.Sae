@@ -29,6 +29,18 @@ public class Index {
         return true;
     } 
     
+    public static String newPseudo (){        
+        Scanner saisie = new Scanner (System.in);
+        System.out.println("Veuillez entrer votre pseudo : ");
+        String name = saisie.nextLine();
+        while(name.matches("^-?\\d+$")){
+            System.out.println("Votre pseudo doit contenir au moin un caractère : ");
+            name = saisie.nextLine();
+        }
+        System.out.println("\nBienvenue Capitaine " + name + " ! Prêt pour la bataille ⚔️ ?\n");
+        return name;
+    }
+    
     public static boolean verifNavireCoule(String[][] grille, int y, int x) {
         if (x == 0) {
             if ((grille[y][x] == (ANSI_GREEN + "✗") && grille[y-1][x] != "□" && grille[y+1][x] != "□" && grille[y][x+1] != "□")) {
@@ -131,8 +143,8 @@ public class Index {
     }
 
     public static void Play() {   
-        String j1 = ANSI_YELLOW + Pseudo.newPseudo();
-        String j2 = ANSI_BLUE + Pseudo.newPseudo();
+        String j1 = ANSI_YELLOW + newPseudo();
+        String j2 = ANSI_BLUE + newPseudo();
         Menu.clearConsole();
 
         afficherGrilleAdversaire(j2Grille, j2);
