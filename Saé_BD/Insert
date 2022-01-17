@@ -1,22 +1,22 @@
-INSERT INTO bookwing.Client (id, prenom, nom, adresse, date_naissance, sexe, nationalité, Tel, mail, num_Passeport)
+INSERT INTO bookwing.client (id_client, prenom, nom, adresse, date_naissance, sexe, nationalite, telephone, mail, num_passeport)
  VALUES
  (01, 'Rébecca', 'Armand', 'Saint-Didier-des-Bois', 03/12/1977, 'F', 'Française', 0654157887, 'R.Armand@gmail.com', '05RP34083' ),
- (36, 'Aimée', 'Hebert', 'Marigny-le-Châtel', 25/10/2000, 'F', 'Française', 0654134887, 'A.Hebert@gmail.com', '05P34H083'),
- (54, 'Marielle', 'Ribeiro', 'Maillères', 10/02/1996, 'F', 'Française', 0654246887, 'M.Ad@gmail.com', '15P64H083'),
+ (36, 'Aimée', 'Hebert', 'Marigny-le-Chatel', 25/10/2000, 'F', 'Française', 0654134887, 'A.Hebert@gmail.com', '05P34H083'),
+ (54, 'Marielle', 'Ribeiro', 'Mailleres', 10/02/1996, 'F', 'Française', 0654246887, 'M.Ad@gmail.com', '15P64H083'),
  (04, 'Hilaire', 'Savary', 'Conie-Molitard', 15/11/1999, 'F', 'Française', 0654157127, 'H.Savary@gmail.com', '05P34HML3'),
  (02, 'Abdel', 'Benkassim', 'Ivry sur Seine', 17/01/1975, 'M', 'Algeriens', 06541356887, 'B.Abdel@gmail.com', '05P389Z83'),
  (10, 'Jelel', 'Ammari', 'Vitry sur Seine', 22/04/1981, 'M',  'Algeriens', 0654157054, 'R.Ammari@gmail.com', '05S24H083'),
  (11, 'Bilal', 'Zidani', 'Choisy', 24/08/1983, 'M', 'Marocains', 0654151237, 'R.Zbilal@gmail.com', '05P34H453'),
- (22, 'Elyes', 'Benamor', 'Krêmelin Bicêtre', 30/07/1980, 'M',  'Algeriens', 0652841564, 'R.Benamor@gmail.com', '54P34H083'),
+ (22, 'Elyes', 'Benamor', 'Kremelin Bicêtre', 30/07/1980, 'M',  'Algeriens', 0652841564, 'R.Benamor@gmail.com', '54P34H083'),
  (07, 'Thierno', 'Seye', 'Maison-Alfort', 03/09/1990, 'M', 'Guinéens', 0654157887, 'T.Seye@gmail.com', '05P43H083'),
  (14, 'Salim', 'Saidi', 'Joinville', 31/10/1992, 'M',  'Algeriens', 0654657887, 'S.saidir@gmail.com', '05P34H234'),
  (15, 'Chakour', 'Omar', 'Arceuil', 28/03/1993, 'M', 'Commoriens', 06544457887, 'c.Omar@gmail.com', '05P34H0876'),
  (21, 'Mady', 'Injai', 'Cachan', 09/05/1983, 'M', 'Senegalais', 06548437887, 'madboy94@gmail.com', '21P34H083'),
  (29, 'Marvyn', 'Le fèvre', 'Alfort ville', 04/12/1987, 'M', 'Italiens', 0734957887, 'Lechekdu94@hotmail.fr','05KZ89083'),
  (05, 'Nanicoye', 'Injai', 'Cachan', 02/05/1989, 'M', 'Senegalais', 0654739887, 'NanicoyeGr@yahoo.fr', '05KZ89099'),
- (19, 'Diakary', 'Coulibally', 'Paris 13ème', 19/10/2000, 'M', 'Maliens', 06521897887, 'Diaksparow@laposte.net','05KZ89012'),
+ (19, 'Diakary', 'Coulibally', 'Paris 13eme', 19/10/2000, 'M', 'Maliens', 06521897887, 'Diaksparow@laposte.net','05KZ89012'),
  (12, 'Oussman', 'Haidara', 'Champigny', 12/01/2001, 'M', 'Maliens', 0654890887, 'AbdoulHaidara@gmail.com','05PD89099'),
  (27, 'Lassana', 'Diakité', 'Montreuil', 14/02/2002, 'M', 'Maliens', 06542347887, 'lassanadiak@msn.com', '05KZ24099'),
  (28, 'Madrane', 'Dramé', 'Drancy', 24/09/1996, 'M', 'Maliens', 06541938887, 'Mamadou@gmail.com', '05AH89099'),
- (16, 'Yasser', 'Gada', 'Paris 19ème', 28/07/1997, 'M',  'Algeriens', 0754157887, 'Carlos@gmail.com', '15KZ89099'),
+ (16, 'Yasser', 'Gada', 'Paris 19eme', 28/07/1997, 'M',  'Algeriens', 0754157887, 'Carlos@gmail.com', '15KZ89099'),
  (31, 'Walid', 'Boussoufi', 'Clamart', 17/10/1994, 'M', 'Française', 0673254681, 'Pabllito.Boussoufi@gmail.com', '051RZ9099');
