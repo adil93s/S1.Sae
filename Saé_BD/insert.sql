@@ -20,3 +20,43 @@ INSERT INTO bookwing.client (id_client, prenom, nom, adresse, date_naissance, se
  (28, 'Madrane', 'Dramé', 'Drancy', '09/24/1996', 'M', 'Maliens', 06541938887, 'mamadou@gmail.com', '05AH89099'),
  (16, 'Yasser', 'Gada', 'Paris 19eme', '07/28/1997', 'M',  'Algeriens', 0754157887, 'carlos@gmail.com', '15KZ89099'),
  (31, 'Walid', 'Boussoufi', 'Clamart', '10/17/1994', 'M', 'Français', 0673254681, 'pabllito.boussoufi@gmail.com', '051RZ9099');
+
+INSERT INTO bookwing.classe (id_classe, classe)
+ VALUES
+(01, 'Economique'),
+(02, 'Economique Premium' ),
+(03, 'Classe Affaires'),
+(04, 'Première Classe');
+
+INSERT INTO bookwing.statut (id_statut, statut)
+ VALUES
+(01, 'Reserver' ),
+(02, 'Annuler'),
+(03, 'Supprimer');
+
+INSERT INTO bookwing.pays (id_pays, nom_pays)
+ VALUES
+ (01, 'France'),
+ (02, 'Algerie'),
+ (03, 'Maroc'),
+ (04, 'Mali'),
+ (05, 'Senegal'),
+ (06, 'Italie');
+
+INSERT INTO bookwing.ville (id_ville, nom_ville)
+ VALUES
+ (01, 'Orly'),
+ (02, 'Oran'),
+ (03, 'Tanger'),
+ (04, 'Bamako'),
+ (05, 'Dakar'),
+ (06, 'Rome');
+
+INSERT INTO bookwing.compagnie (id_compagnie, nom_compagnie)
+ VALUES
+(01, 'Air France'),
+(02, 'Air Algerie'),
+(03, 'Royal Air Maroc'),
+(04, 'Sky Mali'),
+(05, 'Corsair'),
+(06, 'Alitalia');
