@@ -1,4 +1,4 @@
-INSERT INTO Client (prenom, nom, ville, age)
+INSERT INTO bookwing.client (prenom, nom, ville, age)
  VALUES
  ('Rébecca', 'Armand', 'Saint-Didier-des-Bois', 03/12/1977, 'F', 'Française', 0654157887, 'R.Armand@gmail.com', '05RP34083' ),
  ('Aimée', 'Hebert', 'Marigny-le-Châtel', 25/10/2000, 'F', 'Française', 0654134887, 'A.Hebert@gmail.com', '05P34H083'),
