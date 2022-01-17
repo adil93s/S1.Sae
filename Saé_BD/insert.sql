@@ -1,4 +1,4 @@
-INSERT INTO bookwing.client (id_client, prenom, nom, adresse, date_naissance, sexe, nationalite, telephone, mail, num_passeport)
+INSERT INTO bookwing.client (id_client, prenom, nom, adresse, date_naissance, sexe, nationalite, telephone, mail, numero_passeport)
  VALUES
  (01, 'Rébecca', 'Armand', 'Saint-Didier-des-Bois', '12/03/1977', 'F', 'Français', 0654157887, 'r.armand@gmail.com', '05RP34083' ),
  (36, 'Aimée', 'Hebert', 'Marigny-le-Chatel', '10/25/2000', 'F', 'Français', 0654134887, 'a.hebert@gmail.com', '05P34H083'),
