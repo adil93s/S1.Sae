@@ -22,7 +22,7 @@ CREATE TABLE bookwing.vol
 (
     num_vol INT KEY NOT NULL,
     date_heure_depart VARCHAR(255),
-    date_heure_arriver VARCHAR(255),
+    date_heure_arrive VARCHAR(255),
     aeroport_depart VARCHAR(255),
     aeroport_arrive VARCHAR(255),
     capacité INT,
@@ -34,7 +34,7 @@ CREATE TABLE bookwing.vol
 CREATE TABLE bookwing.aeroport 
 (
     code_aeroport VARCHAR(50) NOT NULL,,
-    nom_Aeroport VARCHAR(255),
+    nom_aeroport VARCHAR(255),
     taxe INT,
     id_ville INT NOT NULL,
     id_pays INT NOT NULL,
@@ -49,9 +49,9 @@ CREATE TABLE bookwing.reservation
 (
     num_reservation INT PRIMARY KEY NOT NULL,
     ville_reservation VARCHAR(100),
-    date_Reservation DATE,
-    date_heure_Depart VARCHAR(255),
-    date_heure_Arrive VARCHAR(255),
+    date_reservation DATE,
+    date_heure_depart VARCHAR(255),
+    date_heure_arrive VARCHAR(255),
     prix INT,
     id_client INT NOT NULL,
     id_classe INT NOT NULL,
