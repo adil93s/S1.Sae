@@ -1,11 +1,11 @@
- INSERT INTO classe (id_classe, classe)
+INSERT INTO classe (id_classe, type_classe)
  VALUES
 (01, 'Economique'),
 (02, 'Economique Premium' ),
 (03, 'Classe Affaires'),
 (04, 'Première Classe');
 
-INSERT INTO statut (id_statut, statut)
+INSERT INTO statut (id_statut, etat_statut)
  VALUES
 (01, 'Reserver' ),
 (02, 'Annuler'),
@@ -23,11 +23,17 @@ INSERT INTO pays (id_pays, nom_pays)
 INSERT INTO ville (id_ville, nom_ville, id_pays)
  VALUES
  (01, 'Orly', 01),
- (02, 'Oran', 02),
- (03, 'Tanger', 03),
- (04, 'Bamako', 04),
- (05, 'Dakar', 05),
- (06, 'Rome', 06);
+ (02, 'Marseille', 01),
+ (03, 'Alger', 02),
+ (04, 'Oran', 02),
+ (05, 'Tanger', 03),
+ (06, 'Marrakech', 03),
+ (07, 'Bamako', 04),
+ (08, 'Sikasso', 04),
+ (09, 'Dakar', 05),
+ (10, 'Touba', 05),
+ (11, 'Rome', 06),
+ (12, 'Milan', 06);
 
 INSERT INTO compagnie (id_compagnie, nom_compagnie)
  VALUES
@@ -63,21 +69,27 @@ INSERT INTO client (id_client, prenom, nom, adresse, date_naissance, sexe, natio
  
 INSERT INTO vol (num_vol, date_heure_depart, date_heure_arrive, aeroport_depart, aeroport_arrive, capacite, id_compagnie)
  VALUES
- (555, '03/20/2022 10:30', '03/20/2022 14:30', 'Alger-Houari Boumediene', 'Paris-Orly', '300', 01),
- (245, '02/13/2022 08:30', '02/13/2022 11:30', 'Paris-Orly', 'Tanger-Ibn Batouta', '250', 03),
+ (555, '03/20/2022 10:30', '03/20/2022 14:30', 'Oran - Ahmed Ben Bella', 'Paris-Orly', '300', 01),
+ (245, '02/13/2022 08:30', '02/13/2022 10:30', 'Marseille Provence', 'Tanger-Ibn Batouta', '250', 03),
  (300, '02/19/2022 03:00', '02/19/2022 12:00', 'Dakar-Blaise Diagne', 'Leonard-de-Vinci de Rome Fiumicino', '500', 06),
  (145, '03/02/2022 16:00', '03/02/2022 20:00', 'Paris-Orly', 'Modibo Keita', '350', 04),
- (444, '04/15/2022 22:30', '04/16/2022 01:00', 'Tanger-Ibn Batouta', 'Alger-Houari Boumediene', '400', 02),
+ (444, '04/15/2022 22:30', '04/16/2022 01:00', 'Marrakech-Ménara', 'Alger-Houari Boumediene', '400', 02),
  (170, '01/30/2022 08:00', '01/30/2022 15:00', 'Modibo Keita', 'Dakar-Blaise Diagne', '500', 05);
 
 INSERT INTO aeroport (code_aeroport, nom_aeroport, id_ville, id_pays, id_compagnie)
  VALUES
  ('LFPO', 'Paris-Orly', 01, 01, 01),
- ('DAAG', 'Alger-Houari Boumediene', 02, 02, 02),
- ('GMTT', 'Tanger-Ibn Batouta', 03, 03, 03),
- ('GABS', 'Modibo Keita', 04, 04, 04),
- ('GOBD', 'Dakar-Blaise Diagne', 05, 05, 05), 
- ('LIRF', 'Leonard-de-Vinci de Rome Fiumicino', 06, 06, 06);
+ ('LFML', 'Marseille Provence', 02, 01, 01),
+ ('DAAG', 'Alger-Houari Boumediene', 03, 02, 02),
+ ('DAOO', 'Oran - Ahmed Ben Bella', 04, 02, 02),
+ ('GMTT', 'Tanger-Ibn Batouta', 05, 03, 03),
+ ('GMMX', 'Marrakech-Ménara', 06, 03, 03),
+ ('GABS', 'Modibo Keita', 07, 04, 04),
+ ('GASK', 'Sikasso Dignagan', 08, 04, 04),
+ ('GOBD', 'Dakar-Blaise Diagne', 09, 05, 05), 
+ ('DITM', 'Touba', 10, 05, 05), 
+ ('LIRF', 'Leonard-de-Vinci de Rome Fiumicino', 11, 06, 06),
+ ('LIMC', 'Milan Malpensa', 12, 06, 06);
 
 INSERT INTO reservation (num_reservation, ville_reservation, date_reservation, date_heure_depart, date_heure_arrive, prix, num_vol, id_client, id_classe, id_statut)
  VALUES
