@@ -6,9 +6,12 @@ select sum(prix) from reservation;
 
 select nom, ville_reservation from reservation natural join client where id_statut = 02;
 /*Afficher les noms des clients et la ville où la reservation a été annulé*/
-select nom from class natural join client where classe='Economique';
-/* Affiche le nom des clients qui sont en classe économique*/
+
+select num_passeport from client inner join reservation on (client.id_client = reservation.id_client) inner join classe on (reservation.id_classe = classe.id_classe) where type_classe = 'Economique';
+/* Affiche les numéro de passeport des clients qui sont en classe économique*/
+
 select avg(prix) from reservation;
 /*Affiche la moyenne des prix de réservation*/
-select count(nom) from client where nationalite='francaise';
+
+select count(nom) from client where nationalite = 'Français';
 /* Affiche le nombre de client de nationalité française*/
