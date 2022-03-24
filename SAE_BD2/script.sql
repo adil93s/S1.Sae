@@ -8,7 +8,6 @@ CREATE TABLE pays(
     idpays INT NOT NULL,
     nom_pays VARCHAR(100),
     nom_continent VARCHAR(100),
-    dates date
     stringecy_index INT NOT NULL,
 );
 CREATE TABLE cas(
