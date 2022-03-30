@@ -59,6 +59,7 @@ CREATE TABLE covidata.vaccination(
 );
 CREATE TABLE covidata.restriction(
     idrestriction INT NOT NULL,
+    stringency_index FLOAT NOT NULL,
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_restriction PRIMARY KEY (idrestriction),
