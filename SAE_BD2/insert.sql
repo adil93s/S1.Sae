@@ -46,12 +46,12 @@ INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_
   (4,,,12/02/2022,4),
   (5,,,06/02/2022,5);
   
- INSERT INTO covidata.restriction(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
+ INSERT INTO covidata.restriction(idvaccination, stringency_index, dates, idpays) 
    Values
-  (1,,,,1),
-  (2,,,08/02/2022,2),
-  (3,,,09/02/2022,3),
-  (4,,,12/02/2022,4),
-  (5,,,06/02/2022,5);
+  (1,35.19,12/02/2022,1),
+  (2, ,08/02/2022,2),
+  (3,,09/02/2022,3),
+  (4,,12/02/2022,4),
+  (5,,06/02/2022,5);
   
   
