@@ -21,4 +21,5 @@ INSERT INTO cas(idcas, newcase_million, newcase, test_per_case, dates, idpays)
   (3,0.3031,09/02/2022,3),
   (4,0.1076,12/02/2022,4),
   (5,0.328,06/02/2022,5);
- 
+    INSERT INTO (rate, dates, idpays)
+    Values
