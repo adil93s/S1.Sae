@@ -1,4 +1,4 @@
-INSERT into pays(idpays ,nom_pays ,nom_continent) 
+INSERT into covidata.pays(idpays ,nom_pays ,nom_continent) 
  values 
  (1,'Andorre','Europe'),
  (2,'Suisse','Europe'),
@@ -6,7 +6,7 @@ INSERT into pays(idpays ,nom_pays ,nom_continent)
  (4,'Italie','Europe'),
  (5,'France','Europe');
 
-INSERT INTO cas(idcas, newcase_million, newcase, test_per_case, dates, idpays)
+INSERT INTO covidata.cas(idcas, newcase_million, newcase, test_per_case, dates, idpays)
  values
  (1,,,,12/02/2022,1),
  (2,3072,26771,2,08/02/2022,2),
@@ -14,7 +14,7 @@ INSERT INTO cas(idcas, newcase_million, newcase, test_per_case, dates, idpays)
  (4,1030,62221,9,12/02/2022,4),
  (5,2305,155439,3,06/02/2022,5);
  
- INSERT INTO positive(idpositive, rate, dates, idpays)
+ INSERT INTO covidata.positive(idpositive, rate, dates, idpays)
   values
   (1,,,1),
   (2,0.397,08/02/2022,2),
@@ -22,7 +22,7 @@ INSERT INTO cas(idcas, newcase_million, newcase, test_per_case, dates, idpays)
   (4,0.1076,12/02/2022,4),
   (5,0.328,06/02/2022,5);
 
-    INSERT INTO mort(idmort, rate, dates, idpays)
+INSERT INTO covidata.mort(idmort, rate, dates, idpays)
     Values
   (1,,,1),
   (2,0.397,08/02/2022,2),
@@ -30,7 +30,7 @@ INSERT INTO cas(idcas, newcase_million, newcase, test_per_case, dates, idpays)
   (4,0.1076,12/02/2022,4),
   (5,0.328,06/02/2022,5);
 
-INSERT INTO reproduction(idreproduction, rate, dates, idpays)
+INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
     Values
   (1,,,1),
   (2,0.397,08/02/2022,2),
@@ -38,10 +38,20 @@ INSERT INTO reproduction(idreproduction, rate, dates, idpays)
   (4,0.1076,12/02/2022,4),
   (5,0.328,06/02/2022,5);
 
-INSERT INTO vaccination(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
+INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
    Values
   (1,,,,1),
   (2,,,08/02/2022,2),
   (3,,,09/02/2022,3),
   (4,,,12/02/2022,4),
   (5,,,06/02/2022,5);
+  
+ INSERT INTO covidata.restriction(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
+   Values
+  (1,,,,1),
+  (2,,,08/02/2022,2),
+  (3,,,09/02/2022,3),
+  (4,,,12/02/2022,4),
+  (5,,,06/02/2022,5);
+  
+  
