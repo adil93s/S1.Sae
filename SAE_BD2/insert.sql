@@ -46,7 +46,7 @@ INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_
   (4,,,12/02/2022,4),
   (5,,,06/02/2022,5);
   
- INSERT INTO covidata.restriction(idvaccination, stringency_index, dates, idpays) 
+ INSERT INTO covidata.restriction(idrestriction, stringency_index, dates, idpays) 
    Values
   (1,35.19,12/04/2021,1),
   (2, ,08/02/2022,2),
