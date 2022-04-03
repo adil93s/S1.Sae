@@ -16,6 +16,7 @@ CREATE TABLE covidata.pays(
     CONSTRAINT pk_pays PRIMARY KEY (idpays)
 );
 
+/* On aurait pu également rajouter ici en attribut le taux de positive (rate) pour eviter les jointure avec la table positive*/
 CREATE TABLE covidata.cas(
     idcas INT NOT NULL,
     newcase_million INT NOT NULL,
