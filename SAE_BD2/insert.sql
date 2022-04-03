@@ -29,7 +29,8 @@ INSERT INTO covidata.mort(idmort, new_mort_million, new_mort, dates, idpays)
   (2,6.54,57,'2022-02-08',2),
   (3,12.643,63,'2022-02-09',3),
   (4,4.456,269,'2022-02-12',4),
-  (5,1.913,129,'2022-02-06',5);
+  (5,2.521,170,'2022-02-05',5),
+  (6,1.913,129,'2022-02-06',5);
 
 INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
     Values
@@ -46,7 +47,8 @@ INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_
   (2,12037,766,'2022-02-08',2),
   (3,7784,1131,'2022-02-09',3),
   (4,273208,26725,'2022-02-12',4),
-  (5,41486,9917,'2022-02-06',5);
+  (5,205933,10057,'2022-02-05',5),
+  (6,41486,9917,'2022-02-06',5);
   
  INSERT INTO covidata.restriction(idrestriction, stringency_index, dates, idpays) 
    Values
