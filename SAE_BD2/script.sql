@@ -31,7 +31,7 @@ CREATE TABLE covidata.cas(
 CREATE TABLE covidata.mort(
     idmort INT NOT NULL,
     new_mort_million FLOAT NOT NULL, 
-    new_mort FLOAT NOT NULL,
+    new_mort INT NOT NULL,
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_mort PRIMARY KEY (idmort),
