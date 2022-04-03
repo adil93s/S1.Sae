@@ -1,7 +1,8 @@
-SELECT avg(newcase) FROM covidata.cas NATURAL JOIN covidata.pays WHERE nom_pays = 'France';
+/*Moyenne des nouveaux cas des 5 pays d'Europe*/
+SELECT avg(newcase) FROM covidata.cas;
 
-SELECT variance(rate) FROM covidata.positive NATURAL JOIN covidata.pays WHERE nom_pays = 'Italie';
+/*Variance du taux positive des 5 pays d'Europe */
+SELECT variance(rate) FROM covidata.positive;
 
-SELECT stddev(new_vaccination) FROM covidata.vaccination NATURAL JOIN covidata.pays WHERE nom_pays = 'Andorra';
-
-SELECT
+/*Ecart type des nouvellles vaccinations des 5 pays d'Europe*/
+SELECT stddev(new_vaccination) FROM covidata.vaccination;
