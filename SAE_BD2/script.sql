@@ -12,6 +12,7 @@ CREATE TABLE covidata.pays(
     idpays INT NOT NULL,
     nom_pays VARCHAR(100),
     nom_continent VARCHAR(100),
+    CONSTRAINT pk_pays PRIMARY KEY (idpays)
 );
 CREATE TABLE covidata.cas(
     idcas INT NOT NULL,
