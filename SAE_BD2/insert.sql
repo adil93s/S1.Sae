@@ -33,10 +33,10 @@ INSERT INTO covidata.mort(idmort, new_mort_million, new_mort, dates, idpays)
 INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
     Values
   (1,0.95,'2021-04-12',1),
-  (2,0.397,'2022-02-08',2),
-  (3,0.3031,'2022-02-09',3),
-  (4,0.1076,'2022-02-12',4),
-  (5,0.328,'2022-02-06',5);
+  (2,0.91,'2022-02-08',2),
+  (3,0.98,'2022-02-09',3),
+  (4,0.69,'2022-02-12',4),
+  (5,0.78,'2022-02-06',5);
 
 INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
    Values
