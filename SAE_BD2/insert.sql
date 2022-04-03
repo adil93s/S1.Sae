@@ -37,7 +37,8 @@ INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
   (2,0.91,'2022-02-08',2),
   (3,0.98,'2022-02-09',3),
   (4,0.69,'2022-02-12',4),
-  (5,0.78,'2022-02-06',5);
+  (5,0.8,'2022-02-05',5);
+  (6,0.78,'2022-02-06',5);
 
 INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
    Values
