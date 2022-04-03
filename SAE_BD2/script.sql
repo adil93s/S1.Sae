@@ -22,7 +22,7 @@ CREATE TABLE covidata.cas(
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_cas PRIMARY KEY (idcas),
-    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES pays (idpays) 
+    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES covidata.pays (idpays) 
 );
 CREATE TABLE covidata.mort(
     idmort INT NOT NULL,
@@ -31,7 +31,7 @@ CREATE TABLE covidata.mort(
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_mort PRIMARY KEY (idmort),
-    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES pays (idpays)
+    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES covidata.pays (idpays)
 );
 CREATE TABLE covidata.positive(
     idpositive INT NOT NULL,
@@ -39,7 +39,7 @@ CREATE TABLE covidata.positive(
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_positive PRIMARY KEY (idpositive),
-    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES pays (idpays)
+    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES covidata.pays (idpays)
 );
 CREATE TABLE covidata.reproduction(
     idreproduction INT NOT NULL,
@@ -47,7 +47,7 @@ CREATE TABLE covidata.reproduction(
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_reproduction PRIMARY KEY (idreproduction),
-    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES pays (idpays)
+    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES covidata.pays (idpays)
 );
 CREATE TABLE covidata.vaccination(
     idvaccination INT NOT NULL,
@@ -56,7 +56,7 @@ CREATE TABLE covidata.vaccination(
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_vaccination PRIMARY KEY (idvaccination),
-    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES pays (idpays)
+    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES covidata.pays (idpays)
 );
 CREATE TABLE covidata.restriction(
     idrestriction INT NOT NULL,
@@ -64,5 +64,5 @@ CREATE TABLE covidata.restriction(
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_restriction PRIMARY KEY (idrestriction),
-    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES pays (idpays)
+    CONSTRAINT fk_pays FOREIGN KEY (idpays) REFERENCES covidata.pays (idpays)
 );
