@@ -24,11 +24,11 @@ INSERT INTO covidata.cas(idcas, newcase_million, newcase, test_per_case, dates, 
 
 INSERT INTO covidata.mort(idmort, new_mort_million, new_mort, dates, idpays)
     Values
-  (1,12.928,0,'2021-04-12',1),
-  (2,6.54,0.397,'2022-02-08',2),
+  (1,12.928,1,'2021-04-12',1),
+  (2,6.54,57,'2022-02-08',2),
   (3,12.643,63,'2022-02-09',3),
-  (4,4.456,0.1076,'2022-02-12',4),
-  (5,1.913,0.328,'2022-02-06',5);
+  (4,4.456,269,'2022-02-12',4),
+  (5,1.913,129,'2022-02-06',5);
 
 INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
     Values
