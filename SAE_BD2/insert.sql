@@ -26,7 +26,7 @@ INSERT INTO covidata.mort(idmort, new_mort_million, new_mort, dates, idpays)
     Values
   (1,12.928,0,12/04/2021,1),
   (2,6.54,0.397,08/02/2022,2),
-  (3,,0.3031,09/02/2022,3),
+  (3,,,09/02/2022,3),
   (4,4.456,0.1076,12/02/2022,4),
   (5,1.913,0.328,06/02/2022,5);
 
@@ -40,7 +40,7 @@ INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
 
 INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
    Values
-  (1,,,12/04/2021,1),
+  (1,8817,9,29/04/2021,1),
   (2,,,08/02/2022,2),
   (3,,,09/02/2022,3),
   (4,,,12/02/2022,4),
