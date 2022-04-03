@@ -20,7 +20,8 @@ INSERT INTO covidata.cas(idcas, newcase_million, newcase, test_per_case, dates, 
   (2,0.397,'2022-02-08',2),
   (3,0.3031,'2022-02-09',3),
   (4,0.1076,'2022-02-12',4),
-  (5,0.328,'2022-02-06',5);
+  (5,0.329,'2022-02-05',5),
+  (6,0.328,'2022-02-06',5);
 
 INSERT INTO covidata.mort(idmort, new_mort_million, new_mort, dates, idpays)
     Values
