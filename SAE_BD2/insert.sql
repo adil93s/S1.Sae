@@ -41,17 +41,17 @@ INSERT INTO covidata.reproduction(idreproduction, rate, dates, idpays)
 INSERT INTO covidata.vaccination(idvaccination, new_vaccination, newvaccination_smoothed, dates, idpays) 
    Values
   (1,1973,854,29/04/2021,1),
-  (2,,,08/02/2022,2),
+  (2,12037,766,08/02/2022,2),
   (3,7784,1131,09/02/2022,3),
   (4,273208,26725,12/02/2022,4),
-  (5,,,06/02/2022,5);
+  (5,41486,9917,06/02/2022,5);
   
  INSERT INTO covidata.restriction(idrestriction, stringency_index, dates, idpays) 
    Values
   (1,52.78,12/04/2021,1),
-  (2,,08/02/2022,2),
+  (2,56.48,08/02/2022,2),
   (3,23.15,09/02/2022,3),
   (4,76.85,12/02/2022,4),
-  (5,,06/02/2022,5);
+  (5,69.44,06/02/2022,5);
   
   
