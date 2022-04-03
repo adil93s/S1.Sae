@@ -17,7 +17,7 @@ CREATE TABLE covidata.cas(
     idcas INT NOT NULL,
     newcase_million INT NOT NULL,
     newcase INT NOT NULL,
-    test_per_case INT NOT NULL,
+    test_per_case FLOAT NOT NULL,
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_cas PRIMARY KEY (idcas),
@@ -25,8 +25,8 @@ CREATE TABLE covidata.cas(
 );
 CREATE TABLE covidata.mort(
     idmort INT NOT NULL,
-    new_mort_million INT NOT NULL, 
-    new_mort INT NOT NULL,
+    new_mort_million FLOAT NOT NULL, 
+    new_mort FLOAT NOT NULL,
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_mort PRIMARY KEY (idmort),
@@ -34,7 +34,7 @@ CREATE TABLE covidata.mort(
 );
 CREATE TABLE covidata.positive(
     idpositive INT NOT NULL,
-    rate INT NOT NULL,
+    rate FLOAT NOT NULL,
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_positive PRIMARY KEY (idpositive),
@@ -42,7 +42,7 @@ CREATE TABLE covidata.positive(
 );
 CREATE TABLE covidata.reproduction(
     idreproduction INT NOT NULL,
-    rate INT NOT NULL,
+    rate FLOAT NOT NULL,
     dates date,
     idpays INT NOT NULL,
     CONSTRAINT pk_reproduction PRIMARY KEY (idreproduction),
