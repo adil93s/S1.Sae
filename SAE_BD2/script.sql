@@ -1,13 +1,13 @@
-drop schema if exist covidata;
+drop schema if exists covidata;
 create schema covidata;
 
-drop table if existes vaccination cascade;
-drop table if existes pays cascade;
-drop table if existes cas cascade;
-drop table if existes mort cascade;
-drop table if existes positive cascade;
-drop table if existes reproduction cascade;
-drop table if existes restriction cascade;
+drop table if exists vaccination cascade;
+drop table if exists pays cascade;
+drop table if exists cas cascade;
+drop table if exists mort cascade;
+drop table if exists positive cascade;
+drop table if exists reproduction cascade;
+drop table if exists restriction cascade;
 CREATE TABLE covidata.pays(
     idpays INT NOT NULL,
     nom_pays VARCHAR(100),
